@@ -111,7 +111,7 @@ function vchoix(){
     let windows = document.getElementById("Windows").checked;
     let mac = document.getElementById("Mac").checked;
     let linux = document.getElementById("Linux").checked;
-    if (windows==false || mac==false || linux==false){
+    if (windows==false && mac==false && linux==false){
         alert("Veuillez cocher votre  système d'exploitation préféré  !");
         return false;
     }
@@ -129,4 +129,5 @@ function vcheckbox(){
 
 function envoyer(){
     return vnc() && vdate() && vemail() && vtel() && vgenre() && vmp() && vni() && vchoix() && vcheckbox();
+
 }
