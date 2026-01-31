@@ -30,7 +30,7 @@
             <input type="radio" name="genre" id="femme">  Femme 
             <br>
             <label for="mdp">Mot de passe :</label>
-            <input type="password" name="" id="mdp" placeholder="ex: azerty1234#" >
+            <input type="password" name="" id="mdp" placeholder="ex: azerty1234#">
             <br>
             <label for="cmdp">Confirmer votre mot de passe :</label>
             <input type="password" name="" id="cmdp" placeholder="ex: azerty1234#" >
@@ -43,9 +43,9 @@
             <input type="radio" name="option" id="Mac" value="Mac"><p class="option">Mac</p>
             <input type="radio" name="option" id="Linux" value="Linux"><p class="option">Linux</p>
             <label for="text" >Description:</label>
-            <textarea placeholder="Votre Message" rows="5" id="text" name="text" ></textarea><br>
+            <textarea placeholder="Votre Message" rows="5" id="text" name="text"></textarea><br>
            <label for="niveau">Votre niveau en informatique :</label>
-            <input type="range" name="" id="niveau" required min="1" max="100" value="50" onclick="changer();"><output id="aff">50</output> %
+            <input type="range" name="" id="niveau" required min="1" max="100" value="50" oninput="changer();"><output id="aff">50</output> %
             <br>
             <input type="checkbox" name="" id="checkbox" >
             <p id="p">  J'accepte les conditions d'utilisation</p>
@@ -56,6 +56,4 @@
         </div>
     </form>
 </body>
-
 </html>
-
