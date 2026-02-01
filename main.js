@@ -138,3 +138,7 @@ function vcheckbox(){
 function envoyer(){
     return vnc() && vdate() && vemail() && vtel() && vgenre() && vmp() && vni() && vchoix() && vcheckbox();
 }
+
+function changerTheme(){
+    alert("Désolez votre navigateur n'admet pas cette fonction 😓 !");
+}
