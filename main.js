@@ -25,9 +25,16 @@ function vnc(){
     return true;
 }
 
+function vdomaine(ch){
+    let l=ch.length;
+    if(!(ch.substring(l-3,l)==".tn" || ch.substring(l-4,l)==".com")){
+        return false;
+    }return true;
+}
+
 function vemail(){
     let ch=document.getElementById("email").value;
-    if (ch.indexOf("@gmail.com") ===-1){
+    if (!(ch.indexOf("@") >=0 && vdomaine(ch))){
         alert("Vérifier votre email !");
         return false;
     }
@@ -56,10 +63,11 @@ function vtel(){
 }
 
 function vdate(){
-    let dn= new Date(document.getElementById("date").value);
-    let now= new Date();
-    if(dn>=now){
-        alert("Vérifier votre date de naissance !");
+    let dn= (new Date(document.getElementById("date").value)).getFullYear();
+    let now= (new Date()).getFullYear();
+    let age = now-dn;
+    if(age<18){
+        alert("Votre âge doit être supérieur à 18 ans !");
         return false;
     }
     return true;
@@ -100,7 +108,7 @@ function vni(){
     let ch1=document.getElementById("mdp").value;
     let ch2=document.getElementById("cmdp").value;
     if(ch1 != ch2){
-        alert("Vérifier votre mot de passe !");
+        alert("Vous devez confirmer votre mot de passe !");
         document.getElementById("cmdp").value="";
         return false;
     }
@@ -129,5 +137,4 @@ function vcheckbox(){
 
 function envoyer(){
     return vnc() && vdate() && vemail() && vtel() && vgenre() && vmp() && vni() && vchoix() && vcheckbox();
-
 }
