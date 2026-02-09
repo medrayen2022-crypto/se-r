@@ -264,11 +264,6 @@ input[type="tel"]:focus, input[type="password"]:focus, textarea:focus {
     outline: none;
 }
 
-.radio{
-    margin: 5px ;
-    background-color: #2ccd6a;
-}
-
 textarea {
     resize: none;
     min-height: 100px;
@@ -364,7 +359,6 @@ audio{
 #div_buttons{
     width: 405px;
     margin: 0 auto;
-
 }
 
 #btn-theme {
@@ -381,5 +375,187 @@ audio{
 }
 
 #btn-theme:hover{
+    transform: translateY(-8%);
+}
+
+/* THÈME SOMBRE */
+
+body, nav, main, footer, header, a, h3, iframe, table, form, fieldset {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.dark-mode {
+    background-color: #020617; 
+    color: #e5e7eb;
+}
+
+.dark-mode header {
+    background: #1C1F26;
+    color: #e5e7eb;
+}
+
+
+.dark-mode nav {
+    background-color: #111827;
+    border-right: 2px solid #1e293b;
+}
+
+.dark-mode nav h3 {
+    color: #38bdf8;
+}
+
+.dark-mode nav a {
+    background-color: #1e293b;
+    color: #e5e7eb;
+}
+
+.dark-mode nav a:hover {
+    background-color: #334155;
+    transform: translateX(10px);
+}
+
+
+.dark-mode main {
+    background-color: #020617;
+    color: #e5e7eb;
+}
+
+
+.dark-mode .titre_principal,
+.dark-mode #contact {
+    color: #38bdf8;
+}
+
+
+.dark-mode .summary,
+.dark-mode form,
+.dark-mode fieldset,
+.dark-mode table,
+.dark-mode .box {
+    background-color: #020617;
+    color: #e5e7eb;
+    border-color: #1e293b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.dark-mode .text{
+    background-color: #373f5f;
+    color: #e5e7eb;
+    border-color: orange;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+
+.dark-mode summary {
+    background-color: #0f172a;
+    border: 1px solid #38bdf8;
+    color: #e5e7eb;
+}
+
+.dark-mode summary:hover {
+    background-color: #111827;
+}
+
+
+.dark-mode th {
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+.dark-mode td {
+    border-top: 1px solid #1e293b;
+}
+
+.dark-mode tr:hover {
+    background-color: #111827;
+}
+
+
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #020617;
+    color: #e5e7eb;
+    border: 1px solid #1e293b;
+}
+
+.dark-mode input:focus,
+.dark-mode textarea:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 6px rgba(56, 189, 248, 0.5);
+}
+
+
+.dark-mode iframe {
+    background-color: #020617;
+    border: 2px solid #1e293b;
+}
+
+
+.dark-mode footer {
+    background-color: #23282f;
+    color: #f0f3f6;
+    border-top: 1px solid #1e293b;
+}
+
+
+.dark-mode button,
+.dark-mode #btn-theme {
+    background-color: #58677e;
+    color: #ffffff;
+}
+
+.dark-mode button:hover,
+.dark-mode #btn-theme:hover {
+    background-color: #334155;
+}
+
+.dark-mode form{
+    background-color: #0f2354 ;
+}
+
+.dark-mode label{
+    color: #e3f6ef;
+}
+
+.dark-mode fieldset{
+    border:solid 5px #e8ecff;
+    background-color: #1f3c88;
+}
+
+.dark-mode legend{
+    background-color: #020617;
+    color: aliceblue;
+}
+
+.dark-mode input[type="submit"]{
+    background-color: #5fae2e ;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.dark-mode input[type="reset"]{
+    background-color:#c73838;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.dark-mode input[type="submit"]:hover{
+    background-color: #7ac943;
+    transform: translateY(-8%);
+}
+
+.dark-mode input[type="reset"]:hover{
+    background-color:#e34b4b ;
     transform: translateY(-8%);
 }
