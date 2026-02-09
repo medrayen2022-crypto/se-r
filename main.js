@@ -139,6 +139,31 @@ function envoyer(){
     return vnc() && vdate() && vemail() && vtel() && vgenre() && vmp() && vni() && vchoix() && vcheckbox();
 }
 
-function changerTheme(){
-    alert("Désolez votre navigateur n'admet pas cette fonction 😓 !");
+function changerTheme() {
+// نجيب الزر، موجود فقط في index.html
+const btn = document.getElementById("btn-theme");
+
+// تطبيق Dark mode عند فتح أي صفحة حسب localStorage
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    if (btn) btn.innerText = "Mode : Clair ☀️";
+} else {
+    if (btn) btn.innerText = "Mode : Sombre 🌙";
+}
+
+// زر موجود فقط في index.html
+if (btn) {
+    btn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            btn.innerText = "Mode : Clair ☀️";
+        } else {
+            localStorage.setItem("theme", "light");
+            btn.innerText = "Mode : Sombre 🌙";
+        }
+    });
+}
+
 }
