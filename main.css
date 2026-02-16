@@ -21,16 +21,17 @@ header {
     text-align: center;
     position: relative;
     top: 50%;
-    animation: translation 13s linear infinite;
+    animation: translation 10s linear infinite;
     width: 530px;
 }
 
-@keyframes translation {
-    0% { 
-        transform: translate(-100%,-50%); 
+
+@keyframes translation{
+    0%{
+        transform: translate(-100% , -50%) ;
     }
-    100% { 
-        transform: translate(300%,-50%); 
+    100%{
+        transform: translate(300% , -50%)
     }
 }
 
