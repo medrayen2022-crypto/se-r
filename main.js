@@ -34,7 +34,7 @@ function vdomaine(ch){
 
 function vemail(){
     let ch=document.getElementById("email").value;
-    if (!(ch.indexOf("@") >=0 && vdomaine(ch))){
+    if (ch="" || !(ch.indexOf("@") >=0 && vdomaine(ch))){
         alert("Vérifier votre email !");
         return false;
     }
@@ -63,10 +63,15 @@ function vtel(){
 }
 
 function vdate(){
-    let dn= (new Date(document.getElementById("date").value)).getFullYear();
-    let now= (new Date()).getFullYear();
-    let age = now-dn;
-    if(age<18){
+    let ch = document.getElementById("date").value;
+    if(ch==""){
+        alert("Veuillez entrer votre date de naissance !");
+        return false;
+    }
+    let dn=new Date(ch).getFullYear();
+    let now=new Date().getFullYear();
+    let age=now - dn;
+    if(age < 18){
         alert("Votre âge doit être supérieur à 18 ans !");
         return false;
     }
@@ -140,10 +145,8 @@ function envoyer(){
 }
 
 function changerTheme() {
-// نجيب الزر، موجود فقط في index.html
-const btn = document.getElementById("btn-theme");
+let btn = document.getElementById("btn-theme");
 
-// تطبيق Dark mode عند فتح أي صفحة حسب localStorage
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
     if (btn) btn.innerText = "Mode : Clair ☀️";
@@ -151,7 +154,6 @@ if (localStorage.getItem("theme") === "dark") {
     if (btn) btn.innerText = "Mode : Sombre 🌙";
 }
 
-// زر موجود فقط في index.html
 if (btn) {
     btn.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
